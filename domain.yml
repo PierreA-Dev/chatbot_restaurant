@@ -1,0 +1,101 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - restaurant_booking
+  - restaurant_booking_hours
+  - restaurant_booking_date
+  - booking_summary
+  - restaurant_booking_available
+  - restaurant_booking_person
+  - restaurant_booking_menu
+  - restaurant_booking_number
+  - restaurant_booking_name
+  - restaurant_booking_number_phone
+  
+responses:
+  utter_greet:
+  - text: "Bonjour ! Comment allez-vous?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Aurevoir"
+
+  utter_restaurant_booking:
+  - text: "Je comprends vous voulez reserver une table"
+
+  utter_restaurant_booking_person:
+  - text: "Pour combien de personne ?"
+
+  utter_restaurant_booking_date:
+  - text: "A quelle date ?"
+
+  utter_restaurant_booking_hours:
+  - text: "A quelle heure ?" 
+
+  utter_restaurant_booking_available:
+  - text: "Nous avons une table de disponible. Voulez-vous confirmer la réservation ?"
+
+  utter_booking_summary:
+    - text: |
+        En résumé, vous avez réservé une table. Voici le menu du jour :
+        
+        *Entrées*
+        1. Salade de tomates et mozzarella (Lait)
+        2. Velouté de potiron (Lait, Gluten)
+        3. Tartare de saumon (Poisson)
+        
+        *Plats Principaux*
+        4. Filet de bœuf grillé (Aucun allergène)
+        5. Risotto aux champignons (Lait)
+        
+        *Desserts*
+        6. Tarte aux fraises (Lait, Gluten)
+        7. Mousse au chocolat (Lait)
+
+
+  utter_restaurant_booking_menu:
+  - text: "Si vous souhaitez obtenir le menu complet veuillez cliquer sur ce lien:"
+
+  utter_restaurant_booking_name:
+  - text: "A quelle nom?"
+
+  utter_restaurant_booking_number:
+  - text: "Votre numéro de réservation est 0502AG."
+
+  utter_restaurant_booking_number_phone:
+  - text: "Quelle est votre numéro de téléphone?"
+
+entities:
+  - name
+  - phone_numbers
+
+slots:
+  slot_name:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: name
+  slot_phone_numbers:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: phone_numbers
+      
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

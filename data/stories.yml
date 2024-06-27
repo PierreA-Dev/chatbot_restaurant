@@ -1,0 +1,27 @@
+version: "3.1"
+
+stories:
+
+- story: booking restaurant
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_booking
+  - action: utter_restaurant_booking
+  - action: utter_restaurant_booking_person
+  - intent: restaurant_booking_person
+  - action: utter_restaurant_booking_date
+  - intent: restaurant_booking_date
+  - action: utter_restaurant_booking_hours
+  - intent: restaurant_booking_hours  
+  - action: utter_restaurant_booking_available
+  - intent: restaurant_booking_available
+  - action: utter_booking_summary
+  - action: utter_restaurant_booking_menu
+  - action: utter_restaurant_booking_name
+  - intent: restaurant_booking_name
+  - action: utter_restaurant_booking_number_phone
+  - intent: restaurant_booking_number_phone 
+  - action: utter_restaurant_booking_number
+
+  

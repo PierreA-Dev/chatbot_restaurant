@@ -1,0 +1,368 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - salut
+    - bonjour
+    - salut
+    - bonsoir
+    - bon matin
+    - bonsoir
+    - bon après-midi
+
+- intent: goodbye
+  examples: |
+    - ciao
+    - au revoir
+    - à plus tard
+    - bonne nuit
+    - bye
+    - passe une bonne journée
+    - à bientôt
+    - à plus
+
+- intent: deny
+  examples: |
+    - non
+    - jamais
+    - je ne pense pas
+    - je n'aime pas ça
+    - pas question
+    - pas vraiment
+
+- intent: mood_great
+  examples: |
+    - parfait
+    - super
+    - incroyable
+    - me sens comme un roi
+    - merveilleux
+    - je me sens très bien
+    - je vais bien
+    - je suis incroyable
+    - je vais sauver le monde
+    - super excité
+    - extrêmement bien
+    - tellement parfait
+    - si bon
+    - si parfait
+
+- intent: mood_unhappy
+  examples: |
+    - ma journée était horrible
+    - je suis triste
+    - je ne me sens pas très bien
+    - je suis déçu
+    - super triste
+    - je suis tellement triste
+    - triste
+    - très triste
+    - malheureux
+    - pas bien
+    - pas très bien
+    - extrêmement triste
+    - si triste
+
+- intent: restaurant_booking
+  examples: |
+    - j'aimerais reserver une table
+    - je veux reserver une table
+    - restaurant
+    - réserver
+
+- intent: restaurant_booking_name
+  examples: |
+    - Denise
+    - Angélique
+    - Didier
+    - Roger
+
+- intent: restaurant_booking_date
+  examples: |
+    - [12/03/24]
+    - [17/06/24]
+    - [29/08/24]
+    - [05/10/24]
+    - [14/01/24]
+    - [23/04/24]
+    - [08/11/24]
+    - [16/07/24]
+    - [22/02/24]
+    - [03/09/24]
+    - [30/05/24]
+    - [09/12/24]
+    - [18/03/24]
+    - [27/06/24]
+    - [15/08/24]
+    - [04/10/24]
+    - [13/01/24]
+    - [24/04/24]
+    - [07/11/24]
+    - [20/07/24]
+    - [21/02/24]
+    - [01/09/24]
+    - [29/05/24]
+    - [06/12/24]
+    - [11/03/24]
+    - [19/06/24]
+    - [25/08/24]
+    - [02/10/24]
+    - [10/01/24]
+    - [26/04/24]
+    - [05/11/24]
+    - [17/07/24]
+    - [23/02/24]
+    - [06/09/24]
+    - [31/05/24]
+    - [13/12/24]
+    - [16/03/24]
+    - [28/06/24]
+    - [14/08/24]
+    - [09/10/24]
+    - [15/01/24]
+    - [20/04/24]
+    - [03/11/24]
+    - [18/07/24]
+    - [25/02/24]
+    - [04/09/24]
+    - [27/05/24]
+    - [02/12/24]
+    - [12/03/24]
+    - [22/06/24]
+    - [10/08/24]
+    - [05/10/24]
+    - [19/01/24]
+    - [28/04/24]
+    - [02/11/24]
+    - [07/07/24]
+    - [24/02/24]
+    - [01/09/24]
+    - [30/05/24]
+    - [11/12/24]
+
+- intent: restaurant_booking_hours
+  examples: |
+    - 08h15
+    - 09h00
+    - 10h30
+    - 11h45
+    - 12h00
+    - 13h15
+    - 14h30
+    - 15h00
+    - 16h45
+    - 17h30
+    - 18h00
+    - 19h15
+    - 20h30
+    - 21h00
+    - 22h15
+    - 23h00
+    - 00h30
+    - 01h15
+    - 02h00
+    - 03h45
+    - 04h30
+    - 05h00
+    - 06h15
+    - 07h00
+    - 08h45
+    - 09:15
+    - 10:00
+    - 11:30
+    - 12:45
+    - 13:00
+    - 14:15
+    - 15:30
+    - 16:00
+    - 17:45
+    - 18:30
+    - 19:00
+    - 20:15
+    - 21:30
+    - 22:00
+    - 23:45
+    - 00:15
+    - 01:30
+    - 02:15
+    - 03:00
+    - 04:45
+    - 05:30
+    - 06:00
+    - 07:15
+    - 08:00
+    - 09:45
+
+- intent: restaurant_booking_available
+  examples: |
+    - oui
+    - Oui c'est ça
+    - Ok
+    - je suis d'accord
+    - je valide
+    - je valide ma réservation
+    - réserver
+    - je confirme
+
+- intent: restaurant_booking_person
+  examples: |
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+    - 7
+    - 8 
+    - 9
+    - 10
+    - 11
+    - 12
+    - 13
+    - 14
+    - 15
+    - 1 personne
+    - 2 personnes
+    - 3 personnes
+    - 4 personnes
+    - 5 personnes
+    - 6 personnes
+    - 7 personnes
+    - 8 personnes
+    - 9 personnes
+    - 10 personnes
+    - 11 personnes
+    - 12 personnes
+    - 13 personnes
+    - 14 personnes
+    - 15 personnes
+
+- intent: restaurant_booking_name
+  examples: |
+    - Mon nom est [Jean](name)
+    - C'est réservé au nom de [Marie](name)
+    - Réservez sous [Dupont](name)
+    - [Paul](name)
+    - Nom [Martin](name)
+
+- intent: restaurant_booking_number_phone
+  examples: |
+    - Mon numéro est [0712345675](phone_numbers)
+    - Mon numéro de téléphone est [0712345675](phone_numbers)
+
+- lookup: phone_numbers
+  examples: |
+    - 0612345678
+    - 0687654321
+    - 0698765432
+    - 0623456789
+    - 0634567890
+    - 0645678901
+    - 0656789012
+    - 0667890123
+    - 0678901234
+    - 0689012345
+    - 0690123456
+    - 0601234567
+    - 0611122233
+    - 0612233445
+    - 0613344556
+    - 0614455667
+    - 0615566778
+    - 0616677889
+    - 0617788990
+    - 0618899001
+    - 0619900112
+    - 0611011223
+    - 0612122334
+    - 0613233445
+    - 0614344556
+    - 0615455667
+    - 0616566778
+    - 0617677889
+    - 0618788990
+    - 0619899001
+    - 0610910112
+    - 0611021223
+    - 0612132334
+    - 0613243445
+    - 0614354556
+    - 0615465667
+    - 0616576778
+    - 0617687889
+    - 0618798990
+    - 0619809001
+    - 0701234567
+    - 0712345678
+    - 0723456789
+    - 0734567890
+    - 0745678901
+    - 0756789012
+    - 0767890123
+    - 0778901234
+    - 0789012345
+    - 0790123456
+
+- lookup: name
+  examples: |
+    - Jean
+    - Marie
+    - Pierre
+    - Paul
+    - Jacques
+    - Julie
+    - Sophie
+    - Clara
+    - Emma
+    - Lucas
+    - Hugo
+    - Léa
+    - Alice
+    - Louis
+    - Manon
+    - Chloé
+    - Nathan
+    - Tom
+    - Inès
+    - Sarah
+    - Mathilde
+    - Maxime
+    - Camille
+    - Théo
+    - Valentin
+    - Margaux
+    - Charlotte
+    - Antoine
+    - Samuel
+    - Jeanne
+    - Arthur
+    - Élodie
+    - Adrien
+    - Anaïs
+    - Victor
+    - Alexandre
+    - Benjamin
+    - Mélanie
+    - Léon
+    - Adrienne
+    - François
+    - Gabrielle
+    - Isabelle
+    - Jordan
+    - Karim
+    - Lucie
+    - Mathias
+    - Noémie
+    - Olivier
+    - Patricia
+    - Quentin
+    - Rémi
+    - Sébastien
+    - Thierry
+    - Ulrich
+    - Violette
+    - William
+    - Xavier
+    - Yasmine
+    - Zoé
